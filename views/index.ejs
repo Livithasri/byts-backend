@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"> -->
+   <!-- <link rel="stylesheet" type="text/css" src="/assets/style/styles.css"> -->
+   <link href="/assets/style/styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous">
+
+   
+   <!-- <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+<body>
+    <header class="header">
+        <nav>
+            <a>
+                <span>Product management</span>
+           </a>
+       
+    </nav>
+    </header>
+    <main>
+        <div>
+            <a href="\adduser">
+                <span>New user<i class="fa-solid fa-user"></i></span>
+            </a>
+        </div>
+    </main>
+    <form action="/" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Product name</th>
+                    <!-- <th>Quantity</th> -->
+                    <th>Stock</th>
+                    <th>Action</th>
+                </tr>
+                <!-- <tr>
+                    <td>1</td>
+                    <td>phone</td>
+                     <td>12</td> 
+                    <td>available</td>
+                    <td>
+                        <a href="\updateuser" class="edit">
+                            Edit <i class="fa-solid fa-pen"> </i>
+                        </a>
+
+                        <a href="#" class="delete">
+                              Delete <i class="fa-solid fa-trash"></i></i>
+                        </a>
+                    </td>
+                </tr> -->
+              </thead>
+              <tbody>
+                <% for (var i=0 ; i< user.length ; i++){ %>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td><%= user[i].name %></td>
+                    <td><%= user[i].price %></td>
+                    <td><%= user[i].stock %></td>
+                    <td><%= user[i].status %></td>
+                    <td>
+                        <span>
+                            <a href="\adduser" class="edit">Edit <i class="fa-solid fa-pen"></i></a>
+                        </span>
+                        <span>
+                            <a href="#" class="delete">Delete <i class="fa-solid fa-trash"></i></a>
+                        </span>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+            
+        </table>
+        
+    </form>
+</body>
